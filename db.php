@@ -22,9 +22,9 @@ class Database
     }
     public function runQuery($sql) //выполняет sql запрос по подключенной датабазе
     {
-        try {
-            $this->conn = $this->getConnection();
-            $this->result = $this->conn->query($sql); //в result прилетает запрос от querry который идет от переменной $sql в датабазу через conn
+        try { //команда querry выполняет sql запрос
+            $this->conn = $this->getConnection(); 
+            $this->result = $this->conn->query($sql); //в result прилетает запрос выданный стандартным методом query который идет от переменной $sql в датабазу через conn.
             $this->num_rows = $this->result->num_rows;// получаем количество строк в запросе result через стандартное свойство num_r
         } catch (Exception $exception) {
             echo "Error executing query: " . $exception->getMessage();

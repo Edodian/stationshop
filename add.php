@@ -22,9 +22,9 @@ if($_FILES['FILE']['name']){
        // 3)Проверяем загрузился ли файл на сервер
         if(is_uploaded_file($_FILES['FILE']['tmp_name'])) {
             // 4)Перемещаем загруженный файл в необходимую папку $url
-            $id_img = md5($_FILES['FILE']['name'].date("YmdHis"));
+            $id_img = md5($_FILES['FILE']['name'].date("YmdHis")); //эта команда хеширует картинку и присваивает переменной id_img это занчение
             if(move_uploaded_file($_FILES['FILE']['tmp_name'], $_SERVER['DOCUMENT_ROOT'].$url.$id_img.($_FILES['FILE']['type'] == 'image/jpeg' ? ".jpg":".png"))) 
-            {
+            {//условние двигает картинку с id_img в путь $url и ставит ему расширение картинки 
                   $_POST['url']=$url.$id_img.($_FILES['FILE']['type'] == 'image/jpeg' ? ".jpg":".png");
                     //Выводим сообщение что файл обработан и загружен                
             }
@@ -41,7 +41,7 @@ if($_FILES['FILE']['name']){
 }
 else { echo 'Images must have name!';}
 //var_dump($_POST);
-$product->saveData();
+$product->saveData(); //сохраняет данные класса продукт
 }
 ?>
 

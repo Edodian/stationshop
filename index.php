@@ -3,7 +3,7 @@ session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/db.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/product.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/product.php'); //рут - корневая папка
 if ($_POST['Login'] && $_POST['Password'])//вытаскиваем из поступающих с инптутов данные о логине и пароле
 {
     $login=addslashes($_POST['Login']); //переменной логин присваиваем данные логина с поста
