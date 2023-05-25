@@ -1,3 +1,4 @@
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Station Shop</title>
@@ -15,14 +16,14 @@
     <header id="templatemo_header">
     
     	<div id="site_title">
-        	<h1><a href="#">Station Shop</a></h1>
+        	<h1><a>Station Shop</a></h1>
         </div>
         
         <div id="header_right">
             
             <!-- <a href="login.php">Log in</a> -->
              <?php if($_SESSION['IdAccount']){ ?>
-              <a href="index.php?action=1" ><span>Log out</span></a>
+              <a href="index.php?action=logged" ><span>Log out</span></a>
              <?php }else{ ?>
               <a href="login.php"><span>Log in</span></a>
               <?php } ?>

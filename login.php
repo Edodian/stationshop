@@ -13,15 +13,15 @@ session_start();
 <?php
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
-if (isset($_POST['login'])) //если на входе есть логин 
+if (isset($_POST['Login'])) //если на входе есть логин 
 {
-    $login = addslashes($_POST['login']);
+    $login = addslashes($_POST['Login']);
     unset($_GET['action']);//убираем аттрибут action (не помню зачем)
     require_once($_SERVER['DOCUMENT_ROOT'].'/db.php');
     $mysqli = new Database();// создаем новый класс дб 
     $mysqli->getConnection();// подключаемся к ДБ
    // var_dump($_Session);
-    $sql = "SELECT * FROM Account WHERE login='$login'"; //запрос на вывод данных аккаунта
+    $sql = "SELECT * FROM Account WHERE Login='$login'"; //запрос на вывод данных аккаунта
     $mysqli->runQuery($sql); //записываем в $mysqli массив массивов из getArray($sql) 
     if ($mysqli->num_rows) //если в $mysqli записалась строка, значит, что аккаунт уже существует
     {
