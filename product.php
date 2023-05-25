@@ -1,3 +1,4 @@
+<link href="css/add.css" rel="stylesheet" type="text/css" />
 <?php
 class Product // класс product для работы с дб product
 {
@@ -40,7 +41,7 @@ class Product // класс product для работы с дб product
     public function displayInput() //функция отображения ввода данных при создании нового товара
     {
         ?>
-        <div style="margin-top:150px;margin-left:150px">
+        <div style="margin-top:auto" class="formdiv">
             <form action="add.php" method="POST" name='form' enctype="multipart/form-data">
                  <div>
                      <div>

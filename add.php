@@ -1,4 +1,8 @@
 <?php session_start();
+?>
+<link href="css/add.css" rel="stylesheet" type="text/css" />
+<div style="margin: auto;">
+<?php
 require_once ($_SERVER["DOCUMENT_ROOT"]."/db.php");
 require_once ($_SERVER["DOCUMENT_ROOT"]."/product.php");
 $product = new Product ($_GET['id']);
@@ -40,11 +44,12 @@ else { echo 'Images must have name!';}
 $product->saveData();
 }
 ?>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Station Shop</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 </head>
-
+</div>
 <?php $product->displayInput(); ?>

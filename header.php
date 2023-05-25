@@ -23,7 +23,7 @@
             
             <!-- <a href="login.php">Log in</a> -->
              <?php if($_SESSION['IdAccount']){ ?>
-              <a href="index.php?action=logged" ><span>Log out</span></a>
+              <a href="index.php?action=1" ><span>Log out</span></a>
              <?php }else{ ?>
               <a href="login.php"><span>Log in</span></a>
               <?php } ?>

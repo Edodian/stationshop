@@ -1,0 +1,44 @@
+
+.formdiv {
+	font:normal 62.5%/1.7em Arial, Tahoma, Helvetica, sans-serif;
+	text-align: left;
+	margin: auto;
+	position: relative;
+	max-width: 700px;
+	padding: 16px;
+	background-color: rgba(0, 0, 0, 0.25);
+	color: white;
+	position: relative;
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 15px;
+}
+form{
+
+		text-align: left;
+		margin: auto;
+		position: relative;
+		max-width: 700px;
+		padding: 16px;
+		
+		color: white;
+		position: relative;
+		border: 5px solid rgb(255, 255, 255);
+		border-radius: 15px;
+}
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email]
+{
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: black;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 600;
+
+}
